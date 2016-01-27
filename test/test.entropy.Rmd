@@ -1,0 +1,69 @@
+---
+title: "test.entropy"
+output: html_document
+---
+
+# Regression Tests on Entropy Functions
+
+```{r source}
+source('entropy.R')
+```
+
+```{r test-function} 
+# computeh <- function(x,y,z) {
+#     hx = h(x) # H(x)
+#     hy = h(y) # H(y)
+#     hz = h(z) # H(z)
+#     hxy = h(x,y) # H(x,y)
+#     hxz = h(x,z) # H(x,z)
+#     hxyz = h(x,y,z) # H(x,y,z)
+#     hxgy = condh(x,y) # H(x|y)
+#     mixy = mi(x,y) # I(x;y)
+#     mixygz = condmi(x,y,z) # I(x;y|z)
+#     kl = kl(x,y) # KL(x||y)
+# }
+```
+
+```{r data-1}
+# Basic data
+x = c(1,0,1,0,1,0,1,0)
+y = c(1,1,0,0,1,1,0,0)
+z = c(1,1,1,1,0,0,0,0)
+```
+```{r compute-1}
+# Compute entropies
+h(x) # H(x)
+h(y) # H(y)
+h(z) # H(z)
+h(x,y) # H(x,y)
+h(x,z) # H(x,z)
+h(x,y,z) # H(x,y,z)
+condh(x,y) # H(x|y)
+mi(x,y) # I(x;y)
+condmi(x,y,z) # I(x;y|z)
+kl(x,y) # KL(x||y)
+```
+
+```{r data-2}
+# Different data
+x = c(1,2,3,4,1,2,3,4)
+y = c(1,1,2,2,1,1,2,2)
+z = c(1,4,3,4,1,4,3,4)
+```
+
+```{r compute-2}
+# Compute entropies
+h(x) # H(x)
+h(y) # H(y)
+h(z) # H(z)
+h(x,y) # H(x,y)
+h(x,z) # H(x,z)
+h(x,y,z) # H(x,y,z)
+condh(x,y) # H(x|y)
+mi(x,y) # I(x;y)
+condmi(x,y,z) # I(x;y|z)
+##kl(x,y) # KL(x||y) - fails
+```
+
+
+
