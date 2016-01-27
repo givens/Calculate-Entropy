@@ -4,23 +4,23 @@ Calculate Entropy in R
 
 ## Functions
 
-**condh** - Calculates conditional entropy from feature vectors
+* `condh` - Calculates conditional entropy from feature vectors
 
-**condition** - Produces a conditional probability from a joint one
+* `condition` - Produces a conditional probability from a joint one
 
-**condmi** - Calculates conditional mutual information from data vectors
+* `condmi` - Calculates conditional mutual information from data vectors
 
-**discretize** - Discretize by equal width or equal frequency
+* `discretize` - Discretize by equal width or equal frequency
 
-**entropy** - Calculates joint entropy from a joint probability table
+* `entropy` - Calculates joint entropy from a joint probability table
 
-**h** - Calculates joint entropy from feature vectors
+* `h` - Calculates joint entropy from feature vectors
 
-**marginalize** - Calculates marginal probability from a joint probability
+* `marginalize` - Calculates marginal probability from a joint probability
 
-**mi** - Calculates mutual information from feature vectors
+* `mi` - Calculates mutual information from feature vectors
 
-**prob** - Calculates joint probability
+* `prob` - Calculates joint probability
 
 ## Example
 
