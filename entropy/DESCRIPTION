@@ -1,0 +1,9 @@
+Package: entropy
+Version: 0.1
+Date: 2014-12-27
+Title: Calculates entropy in various forms.
+Author: Brendhan Givens
+Maintainer: Brendhan Givens <brendhangivens<at>gmail<dot>com>
+Description: This is a package implementing simple entropy functions including conditional entropy, mutual information, and conditional mutual information.
+Suggests:
+License: GPL (>= 3)

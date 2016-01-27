@@ -1,0 +1,259 @@
+z
+source('discretize')
+source('discretize.R')
+?discretize
+w = discretize(r,3,"ewd")
+w = discretize(r,3,type="ewd")
+w = discretize(r,3)
+list.files('*.R')
+getwd()
+list.files
+?list.files
+list.files(pattern="*.R")
+source(list.files(pattern='*.R'))
+?source
+source('*.R')
+?mapply
+files = list.files(pattern="*.R")
+files
+mapply(source,files)
+?source
+mapply(source,file=files)
+condh
+condition
+mi
+mim
+prob
+condmi
+z
+w
+discretize
+discretize(r,4,method="ewd")
+source('discretize.R')
+discretize(r,4,method="ewd")
+discretize
+source('discretize.R')
+discretize(r,4,method="ewd")
+r
+ls()
+x
+w = discretize(x,4,"ewd")
+w
+x
+x = rnorm(1000)
+y = discretize(r,3,"ewd")
+y = discretize(x,3,"ewd")
+z = discretize(x,4,"ewd")
+w = discretize(x,10,"ewd")
+w
+mi(y,z)
+condh(y,z)
+condh(y,z,1)
+length(y)
+length(z)
+condh
+condh(y,z,cond=1)
+condh(y,z,cond=2)
+discretize
+condmi(y,z,w)
+mi(y,z)
+condmi(y,z,w)
+mi(y,w)
+h(y)
+mi(z,w)
+h(z)
+mi(y,z)
+h(y)
+h(z)
+w = discretize(x,10,"efd")
+w
+v = discretize(x,10,"ewd")
+y
+v
+mi(v,w)
+h(v)
+h(w)
+v = discretize(x,10,"eqd")
+source('discretize.R')
+v = discretize(x,10,"eqd")
+v = discretize(x,10,"ewd")
+v
+u v
+u
+v
+prob(u,v)
+prob(v,w)
+p = prob(v,w)
+sum(diag(p))
+sum(prob(v)*prob(w))
+C = sum(diag(p))-sum(prob(v)*prob(w))
+C
+b2 = 0.5*(prob(v)-prob(w))^2
+b2
+outer(prob(v),prob(w))
+sum(diag(p))-outer(prob(v),prob(w))
+C = sum(diag(p))-outer(prob(v),prob(w))
+C
+cond(C)
+??cond
+kappa(C)
+b2 = 0.5*(prob(v)-prob(w))^2
+b2
+V = 0.5*(1-prob(w)^2)
+V
+prob(w)
+w
+V = 0.5*(1-prob(w)^2)
+s2 = 0.5*(1-prob(v)^2)
+s2
+b2
+v
+V
+v = discretize(x,3,"ewd")
+w = discretize(x,3,"eqd")
+discretize
+v = discretize(x,3,"efd")
+w
+v
+w
+v
+w = discretize(x,3,"ewd")
+w
+pv = prob(v)
+pw = prob(w)
+p = prob(v,w)
+p
+C = sum(diag(p))-outer(pv,pw)
+C
+b2 = 0.5*(pv-pw)^2
+b2
+V = 0.5*(1-w^2)
+V
+V = 0.5*(1-pw^2)
+s2 = 0.5*(1-pv^2)
+s2
+V
+b2
+u = sample(1:2,10,replace=T)
+v = sample(1:2,10,replace=T)
+u
+v
+prob(u,v)
+v = sample(1:2,10,replace=T)
+prob(u,v)
+v = sample(1:2,10,replace=T)
+prob(u,v)
+f = sample(1:2,100,replace=T,prob=c(1,2))
+f
+h = sample(1:2,100,replace=T,prob=c(1,3))
+h
+prob(f,h)
+r = rnorm(1000)
+r1 = r[1:600]
+r2 = r[601:1000]
+y1 = discretize(r1,5,"ewd")
+y2 = discretize(r2,5,"ewd")
+y1
+y2
+p1 = prob(y1)
+p2 = prob(y2)
+p1
+p2
+sum(p1*log(p1/p2))
+b2 = sum((y1-y2)^2)
+(y1-y2)
+b2 = sum((p1-p2)^2)
+b2
+bx = b2
+vx = 0.5(1-sum(p1^2))
+vx = 0.5*(1-sum(p1^2))
+vx
+sx = 0.5*(1-sum(p2^2))
+sx
+cost = bx + vx + sx
+cost
+outer(p1,p2)
+1-sum(diag(outer(p1,p2)))
+p = outer(p1,p2)
+p
+sum(p,1)
+sum(p)
+colMeans(p)
+p1
+p2
+colSums(p)
+r = rnorm(10000)
+r
+y = discretize(r,5,"ewd")
+y
+p = prob(y)
+p
+1-sum(p^2)
+p = prob(discretize(r,5,"ewd"))
+p
+p5 = prob(discretize(r,5,"ewd"))
+p10 = prob(discretize(r,5,"ewd"))
+p10
+1-sum(p5^2)
+1-sum(p10^2)
+p10 = prob(discretize(r,10,"ewd"))
+1-sum(p10^2)
+for (k in 1:20) {
+p[k] = 1-sum(prob(discretize(r,10,"ewd"))^2)
+}
+p
+for (k in 1:20) {
+p[k] = 1-sum(prob(discretize(r,k,"ewd"))^2)
+}
+for (k in 1:20) {}
+for (k in 1:20) {
+y = discretize(r,k,"ewd")
+p = prob(y)
+q[k] = 1-sum(p^2)
+}
+for (k in 2:20) {
+y = discretize(r,k,"ewd")
+p = prob(y)
+q[k] = 1-sum(p^2) }
+p
+1-sum(p^2)
+q = NULL
+for (k in 2:20) {#
++ y = discretize(r,k,"ewd")#
++ p = prob(y)#
++ q[k] = 1-sum(p^2) }
+for (k in 2:20) {
+y = discretize(r,k,"ewd")
+p = prob(y)
+for (k in 2:20) {#
++ y = discretize(r,k,"ewd")#
++ p = prob(y)#
++ q[k] = 1-sum(p^2) }
+}
+for (k in 2:20) {
+y = discretize(r,k,"ewd")
+p = prob(y)
+for (k in 2:20) {#
++ y = discretize(r,k,"ewd")#
++ p = prob(y)#
++ q[k] = 1-sum(p^2) }
+for (k in 2:20) {
+y = discretize(r,k,"ewd")
+p = prob(y)
+q[k] = 1-sum(p^2) }
+q
+q[1]=0
+plot(q)
+plot(log(q))
+plot(1-q)
+plot(sqrt(1-q))
+1-q
+q = 1:20
+q = (q-1)/q
+q
+1 = q
+1-q
+plot(1-q)
+plot(log(1-q))
+plot(-log(1-q))
+plot(log(1-q))
