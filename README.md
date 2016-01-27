@@ -29,10 +29,10 @@ x = c(1,0,1,0,1,0,1,0)
 y = c(1,1,0,0,1,1,0,0)
 z = c(1,1,1,1,0,0,0,0)
 
-h(x) 
-h(x,y)
-h(x,y,z)
-cond(x,y)
-mi(x,y)
-condmi(x,y,z)
+h(x) # H(x) = 1
+h(x,y) # H(x,y) = 2
+h(x,y,z) # H(x,y,z) = 3
+condh(x,y) # H(x|y) = 1
+mi(x,y) # I(x;y) = 0
+condmi(x,y,z) # I(x;y|z) = 0
 ```
